@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'helloo-django-todo-app.herokuapp.com',
+    '8000-attilafawal-hellodjango-k8cco24re0c.ws-us99.gitpod.io'
 ]
 
 
