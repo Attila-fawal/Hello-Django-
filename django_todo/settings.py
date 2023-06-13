@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-gf&0*o-zm5ym1z68rx1g()mrll2ns(7il*$-7_fhwd7yj7is54
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-attilafawal-hellodjango-k8cco24re0c.ws-us99.gitpod.io',
+    'helloo-django-todo-app.herokuapp.com',
 ]
 
 
