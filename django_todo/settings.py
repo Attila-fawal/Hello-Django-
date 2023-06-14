@@ -34,8 +34,7 @@ import logging
 if development:
     ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-b2p1tq3wp6d.ws-us99.gitpod.io']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
-    logging.info(f"ALLOWED_HOSTS: {ALLOWED_HOSTS}")
+    ALLOWED_HOSTS = ['helloo-django-todo-app.herokuapp.com']
 
 
 
