@@ -28,8 +28,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-ljnnycqw9jv.ws-us99.gitpod.io', 'helloo-django-todo-app.herokuapp.com']
-
+if development:
+    ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-b2p1tq3wp6d.ws-us99.gitpod.io']
+else:
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 
@@ -90,6 +92,20 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+
+    # HSTS settings
+    SECURE_HSTS_SECONDS = 3600  # you may want to increase this value in production
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+
+# HTTPS redirect and cookies settings
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
+# Default primary key type
+    DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'  # or 'django.db.models.BigAutoField'
+
 
 
 # Password validation
