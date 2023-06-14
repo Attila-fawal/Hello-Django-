@@ -31,7 +31,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-ljnnycqw9jv.ws-us99.gitpod.io']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'helloo-django-todo-app.herokuapp.com')]
 
 
 # Application definition
