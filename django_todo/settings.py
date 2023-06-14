@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import dj_database_url
 
-development = os.environ.get('DEVELOPMENT', True)
+development = os.environ.get('DEVELOPMENT', False)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +28,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-b2p1tq3wp6d.ws-us99.gitpod.io', 'helloo-django-todo-app.herokuapp.com']
+if development:
+    ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-wxh9xucpzu4.ws-us99.gitpod.io']
+else:
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+
 
 
 
