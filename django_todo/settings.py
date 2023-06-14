@@ -34,6 +34,7 @@ else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME', 'helloo-django-todo-app.herokuapp.com')]
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
