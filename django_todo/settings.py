@@ -28,6 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
+
 if development:
     ALLOWED_HOSTS = ['localhost', '8000-attilafawal-hellodjango-b2p1tq3wp6d.ws-us99.gitpod.io']
 else:
